@@ -1,15 +1,15 @@
-
 import './App.css';
 import About from './Components/About';
 import NavBar from './Components/NavBar'
 import TextArea from './Components/TextArea';
 import React, { useState } from 'react';
+
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -35,7 +35,7 @@ function App() {
         <div className="container my-3">
           <Switch>
             <Route exact path="/about">
-              <About />
+              <About mode={mode}/>
             </Route>
             <Route exact path="/">
               <TextArea heading="Text Converter" mode={mode} />
